@@ -41,6 +41,7 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"/>
             <TextView
+                android:id="@+id/yogi"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
@@ -57,6 +58,7 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"/>
             <TextView
+                android:id="@+id/long_auto"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
@@ -73,13 +75,14 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"/>
             <TextView
+                android:id="@+id/wings"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The Autobiography of Benjamin Franklin"
+                android:text="Wings of Fire"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -100,13 +103,14 @@
             android:orientation="vertical"
             >
             <TextView
+                android:id="@+id/Salt"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The Enigma Chronicles"
+                android:text="The Story of Pa Salt"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -116,13 +120,14 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"/>
             <TextView
+                android:id="@+id/homecoming"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Shadows of Eternity"
+                android:text="Homecoming"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -132,13 +137,14 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"/>
             <TextView
+                android:id="@+id/Maiden"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Whispering Winds"
+                android:text="The Maiden"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -148,13 +154,14 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"/>
             <TextView
+                android:id="@+id/Love"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The Clockwork Chronicles"
+                android:text="The Love of My Life"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -175,13 +182,14 @@
             android:orientation="vertical"
             >
             <TextView
+                android:id="@+id/watchman"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Crimson Fury"
+                android:text="Watchmen"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -191,13 +199,14 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"/>
             <TextView
+                android:id="@+id/knight"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Starborn Saga"
+                android:text="The Dark Knight Returns"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -207,13 +216,14 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"/>
             <TextView
+                android:id="@+id/sandman"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Shadowbound"
+                android:text="The Sandman"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -223,13 +233,14 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"/>
             <TextView
+                android:id="@+id/saga"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Chronicles of the Cosmic Guardians"
+                android:text="Saga"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -244,19 +255,20 @@
         </LinearLayout>
         <LinearLayout
             android:id="@+id/list_history_book"
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
             <TextView
+                android:id="@+id/Sapiens"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The Silk Road"
+                android:text="Sapiens"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -266,13 +278,14 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"/>
             <TextView
+                android:id="@+id/Guns"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The American Revolution: Birth of a Nation"
+                android:text="The Guns of August"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -282,13 +295,14 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"/>
             <TextView
+                android:id="@+id/Diary"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The Rise and Fall of the Roman Empire"
+                android:text="The Diary of a Young Girl"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"
@@ -298,13 +312,14 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"/>
             <TextView
+                android:id="@+id/Histories"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The World Wars: A Global Perspective"
+                android:text="Histories"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:gravity="center"

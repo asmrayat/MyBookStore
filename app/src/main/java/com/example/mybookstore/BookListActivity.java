@@ -19,6 +19,8 @@ public class BookListActivity extends AppCompatActivity {
             fic_Salt,fic_Homecoming,fic_Maiden,fic_love,
             com_Watchmen,com_Knight,com_Sandman,com_Saga,
             his_Sapiens,his_Guns, his_Diary,his_Histories;
+
+    TextView TotalAmount;
     Button cart;
 
 
@@ -60,6 +62,8 @@ public class BookListActivity extends AppCompatActivity {
 
 
         cart = findViewById(R.id.cart);
+        TotalAmount = findViewById(R.id.total_amountList);
+        TotalAmount.setText(String.valueOf(CartManager.TotalAmount()));
 
 
         String auto = getIntent().getExtras().getString("auto","defaultKey");
@@ -72,8 +76,6 @@ public class BookListActivity extends AppCompatActivity {
         if (auto.equals("auto")){
             list_auto.setVisibility(View.VISIBLE);
 
-
-
             auto_steve.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -83,7 +85,8 @@ public class BookListActivity extends AppCompatActivity {
                             "Steve Jobs is the authorized self-titled biography of American business magnate and Apple co-founder Steve Jobs. The book was written at the request of Jobs by Walter Isaacson.",
                             "Walter Isaacson",
                             "10",
-                            R.drawable.steve_job_book_cover);
+                            R.drawable.steve_job_book_cover,
+                            "auto");
                 }
             });
             auto_yogi.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +98,8 @@ public class BookListActivity extends AppCompatActivity {
                             "Autobiography of a Yogi is an autobiography of Paramahansa Yogananda published in 1946.",
                             "Paramahansa Yogananda",
                             "15",
-                            R.drawable.yogi_book_cover);
+                            R.drawable.yogi_book_cover,
+                            "auto");
                 }
             });
             auto_long.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +111,8 @@ public class BookListActivity extends AppCompatActivity {
                             "Long Walk to Freedom is an autobiography credited to South African President Nelson Mandela.",
                             "Nelson Mandela",
                             "20",
-                            R.drawable.long_walk_to_freedom_book_cover);
+                            R.drawable.long_walk_to_freedom_book_cover,
+                            "auto");
                 }
             });
             auto_wings.setOnClickListener(new View.OnClickListener() {
@@ -119,7 +124,8 @@ public class BookListActivity extends AppCompatActivity {
                             "Wings of Fire, is the autobiography of the Missile Man of India and President of India, Dr. A. P. J. Abdul Kalam.",
                             "A. P. J. Abdul Kalam",
                             "22",
-                            R.drawable.wings);
+                            R.drawable.wings,
+                            "auto");
                 }
             });
 
@@ -137,7 +143,8 @@ public class BookListActivity extends AppCompatActivity {
                             "Paris, 1928. A boy is found, moments from death, and taken in by a kindly family who gives him a life he could never have dreamed of, but he refuses to tell anyone who he truly is.",
                             "Lucinda Riley",
                             "18",
-                            R.drawable.salt);
+                            R.drawable.salt,
+                            "fictional");
                 }
             });
             fic_Homecoming.setOnClickListener(new View.OnClickListener() {
@@ -149,7 +156,8 @@ public class BookListActivity extends AppCompatActivity {
                             "Adelaide Hills, Christmas Eve, 1959: At the end of a scorching hot day, beside a creek in the grounds of a grand country house",
                             "Kate Morton",
                             "22",
-                            R.drawable.home_cover);
+                            R.drawable.home_cover,
+                            "fictional");
                 }
             });
             fic_Maiden.setOnClickListener(new View.OnClickListener() {
@@ -161,7 +169,8 @@ public class BookListActivity extends AppCompatActivity {
                             "Long Walk to Freedom is an autobiography credited to South African President Nelson Mandela.",
                             "Kate Foster",
                             "25",
-                            R.drawable.maiden_book_cover);
+                            R.drawable.maiden_book_cover,
+                            "fictional");
                 }
             });
             fic_love.setOnClickListener(new View.OnClickListener() {
@@ -173,7 +182,8 @@ public class BookListActivity extends AppCompatActivity {
                             "A NEW YORK TIMES BESTSELLER | GOOD MORNING AMERICA BOOK CLUB PICK“Gripping, heartbreaking and impossible to put down",
                             "Rosie Walsh",
                             "30",
-                            R.drawable.love_book_cover);
+                            R.drawable.love_book_cover,
+                            "fictional");
                 }
             });
         }
@@ -189,7 +199,8 @@ public class BookListActivity extends AppCompatActivity {
                             "A groundbreaking graphic novel that deconstructs the superhero genre, \"Watchmen\" presents a complex and morally ambiguous story set in an alternate version of the United States where masked vigilantes are a part of society",
                             "Alan Moore and Dave Gibbons",
                             "38",
-                            R.drawable.watchman_cover);
+                            R.drawable.watchman_cover,
+                            "comics");
                 }
             });
             com_Knight.setOnClickListener(new View.OnClickListener() {
@@ -201,7 +212,8 @@ public class BookListActivity extends AppCompatActivity {
                             "In this iconic Batman tale, Frank Miller depicts an aging Bruce Wayne coming out of retirement to reclaim Gotham City from crime, offering a gritty and introspective examination of Batman's character and the city he protects.",
                             "Frank Miller",
                             "32",
-                            R.drawable.knight_cover);
+                            R.drawable.knight_cover,
+                            "comics");
                 }
             });
             com_Sandman.setOnClickListener(new View.OnClickListener() {
@@ -213,7 +225,8 @@ public class BookListActivity extends AppCompatActivity {
                             "Neil Gaiman's epic fantasy series follows Morpheus, the Lord of Dreams, and his interactions with various mythological and historical characters. Blending elements of mythology, horror, and dark fantasy",
                             "Neil Gaiman",
                             "25",
-                            R.drawable.sand_cover);
+                            R.drawable.sand_cover,
+                            "comics");
                 }
             });
             com_Saga.setOnClickListener(new View.OnClickListener() {
@@ -225,7 +238,8 @@ public class BookListActivity extends AppCompatActivity {
                             "An epic space opera that defies genre conventions, \"Saga\" tells the story of star-crossed lovers from warring alien races as they navigate the challenges of parenthood and survival in a vast and violent universe. ",
                             "Brian K. Vaughan and Fiona Staples",
                             "30",
-                            R.drawable.saga_coer);
+                            R.drawable.saga_coer,
+                            "comics");
                 }
             });
 
@@ -243,7 +257,8 @@ public class BookListActivity extends AppCompatActivity {
                             "Sapiens: A Brief History of Humankind is a book by Yuval Noah Harari, first published in Hebrew in Israel in 2011",
                             "Yuval Noah Harari",
                             "18",
-                            R.drawable.sapiens_cover);
+                            R.drawable.sapiens_cover,
+                            "history");
                 }
             });
             his_Guns.setOnClickListener(new View.OnClickListener() {
@@ -255,7 +270,8 @@ public class BookListActivity extends AppCompatActivity {
                             "The Guns of August is a volume of history by Barbara W. Tuchman. It is centered on the first month of World War I. After introductory chapters",
                             "Barbara W. Tuchman",
                             "22",
-                            R.drawable.gun_cover);
+                            R.drawable.gun_cover,
+                            "history");
                 }
             });
             his_Diary.setOnClickListener(new View.OnClickListener() {
@@ -267,7 +283,8 @@ public class BookListActivity extends AppCompatActivity {
                             "The Diary of a Young Girl, often referred to as The Diary of Anne Frank, is a book of the writings from the Dutch-language",
                             "Anne Frank",
                             "29",
-                            R.drawable.dairy_cover);
+                            R.drawable.dairy_cover,
+                            "history");
                 }
             });
             his_Histories.setOnClickListener(new View.OnClickListener() {
@@ -279,7 +296,8 @@ public class BookListActivity extends AppCompatActivity {
                             "The Histories of Herodotus is considered the founding work of history in Western literature. Written around 430 BC in the Ionic dialect of classical Greek",
                             "Herodotus",
                             "38",
-                            R.drawable.histories_cover);
+                            R.drawable.histories_cover,
+                            "history");
                 }
             });
         }
@@ -287,17 +305,21 @@ public class BookListActivity extends AppCompatActivity {
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(BookListActivity.this,CartActivity.class));
+                Intent intent = new Intent(BookListActivity.this, CartActivity.class);
+                intent.putExtra(auto, auto);
+                intent.putExtra(fictional, fictional);
+                intent.putExtra(comics, comics);
+                intent.putExtra(history, history);
+                startActivity(intent);
+                finish();
             }
         });
 
 
     }
 
-    public void bookDataPass(String bookName, String bookDetail, String authorName, String price, int cover){
+    public void bookDataPass(String bookName, String bookDetail, String authorName, String price, int cover, String auto){
         Intent intent = new Intent(BookListActivity.this, DetailActivity.class);
-
-
 
         intent.putExtra("bookName", bookName);
         intent.putExtra("bookDetail", bookDetail);
@@ -309,8 +331,10 @@ public class BookListActivity extends AppCompatActivity {
         ByteArrayOutputStream bs = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 50, bs);
         intent.putExtra("byteArray", bs.toByteArray());
+        intent.putExtra(auto, auto);
 
         startActivity(intent);
+        finish();
     }
 
 

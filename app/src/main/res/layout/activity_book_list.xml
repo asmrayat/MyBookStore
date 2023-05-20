@@ -355,7 +355,7 @@
                 android:textSize="35dp"
                 />
             <TextView
-                android:id="@+id/total_amount"
+                android:id="@+id/total_amountList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00.0"

@@ -42,7 +42,10 @@ public class CartActivity extends AppCompatActivity {
         Delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                adapter.notifyDataSetChanged();
                 CartManager.cartItems.clear();
+                TotalAmount.setText(String.valueOf(CartManager.TotalAmount()));
+
             }
         });
 

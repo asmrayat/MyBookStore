@@ -85,10 +85,13 @@ public class DetailActivity extends AppCompatActivity {
                         for (CartItem item : CartManager.cartItems) {
                             if (item.getBookName().equals(bookname)) {
                                 // Update the quantity and total price of the existing item
-                                item.setQuantity(quantity);
+                                int newQuantity = item.getQuantity() + quantity;
+                                double newtotalSameBook = item.getTotalSameBook() + totalSameBook;
+                                double Total = item.getTotalPrice() + (quantity*bookPrice);
+                                item.setQuantity(newQuantity);
                                 item.setBookPrice(bookPrice);
-                                item.setTotalSameBook(totalSameBook);
-                                item.setTotalPrice(quantity*bookPrice);
+                                item.setTotalSameBook(newtotalSameBook);
+                                item.setTotalPrice(Total);
                                 isExistingItem = true;
 
                                 handle(auto,fictional,comics,history);

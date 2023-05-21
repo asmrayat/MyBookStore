@@ -90,6 +90,14 @@ public class DetailActivity extends AppCompatActivity {
                                 item.setTotalSameBook(totalSameBook);
                                 item.setTotalPrice(quantity*bookPrice);
                                 isExistingItem = true;
+                                Intent intent = new Intent(DetailActivity.this, BookListActivity.class);
+                                intent.putExtra(auto, auto);
+                                intent.putExtra(fictional, fictional);
+                                intent.putExtra(comics, comics);
+                                intent.putExtra(history, history);
+                                startActivity(intent);
+                                finish();
+                                Toast.makeText(DetailActivity.this, "Item added to cart", Toast.LENGTH_SHORT).show();
                                 break;
                             }
                         }
@@ -97,6 +105,14 @@ public class DetailActivity extends AppCompatActivity {
                         if (!isExistingItem) {
                             CartItem item = new CartItem(bookname, quantity, bookPrice, totalSameBook);
                             CartManager.cartItems.add(item);
+                            Intent intent = new Intent(DetailActivity.this, BookListActivity.class);
+                            intent.putExtra(auto, auto);
+                            intent.putExtra(fictional, fictional);
+                            intent.putExtra(comics, comics);
+                            intent.putExtra(history, history);
+                            startActivity(intent);
+                            finish();
+                            Toast.makeText(DetailActivity.this, "Item added to cart", Toast.LENGTH_SHORT).show();
                         }
                     } else {
                         Toast.makeText(DetailActivity.this, "Enter Valid Quantity", Toast.LENGTH_SHORT).show();

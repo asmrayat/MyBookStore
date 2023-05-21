@@ -90,12 +90,8 @@ public class DetailActivity extends AppCompatActivity {
                                 item.setTotalSameBook(totalSameBook);
                                 item.setTotalPrice(quantity*bookPrice);
                                 isExistingItem = true;
-                                Intent intent = new Intent(DetailActivity.this, BookListActivity.class);
-                                intent.putExtra(auto, auto);
-                                intent.putExtra(fictional, fictional);
-                                intent.putExtra(comics, comics);
-                                intent.putExtra(history, history);
-                                startActivity(intent);
+
+                                handle(auto,fictional,comics,history);
                                 finish();
                                 Toast.makeText(DetailActivity.this, "Item added to cart", Toast.LENGTH_SHORT).show();
                                 break;
@@ -105,12 +101,8 @@ public class DetailActivity extends AppCompatActivity {
                         if (!isExistingItem) {
                             CartItem item = new CartItem(bookname, quantity, bookPrice, totalSameBook);
                             CartManager.cartItems.add(item);
-                            Intent intent = new Intent(DetailActivity.this, BookListActivity.class);
-                            intent.putExtra(auto, auto);
-                            intent.putExtra(fictional, fictional);
-                            intent.putExtra(comics, comics);
-                            intent.putExtra(history, history);
-                            startActivity(intent);
+
+                            handle(auto,fictional,comics,history);
                             finish();
                             Toast.makeText(DetailActivity.this, "Item added to cart", Toast.LENGTH_SHORT).show();
                         }
@@ -127,14 +119,7 @@ public class DetailActivity extends AppCompatActivity {
         DetailActivity.this.getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-
-
-                Intent intent = new Intent(DetailActivity.this, BookListActivity.class);
-                intent.putExtra(auto, auto);
-                intent.putExtra(fictional, fictional);
-                intent.putExtra(comics, comics);
-                intent.putExtra(history, history);
-                startActivity(intent);
+                handle(auto,fictional,comics,history);
 
                 finish();
 
@@ -143,6 +128,15 @@ public class DetailActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public void handle(String value1,String value2,String value3,String value4){
+        Intent intent = new Intent(DetailActivity.this, BookListActivity.class);
+        intent.putExtra(value1, value1);
+        intent.putExtra(value2, value2);
+        intent.putExtra(value3, value3);
+        intent.putExtra(value4, value4);
+        startActivity(intent);
     }
 
 

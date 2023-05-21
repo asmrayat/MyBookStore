@@ -97,13 +97,13 @@ public class DetailActivity extends AppCompatActivity {
                         if (!isExistingItem) {
                             CartItem item = new CartItem(bookname, quantity, bookPrice, totalSameBook);
                             CartManager.cartItems.add(item);
+
                         }
                     } else {
                         Toast.makeText(DetailActivity.this, "Enter Valid Quantity", Toast.LENGTH_SHORT).show();
                     }
+
                 }
-
-
             }
         });
 
@@ -119,7 +119,6 @@ public class DetailActivity extends AppCompatActivity {
                 intent.putExtra(comics, comics);
                 intent.putExtra(history, history);
                 startActivity(intent);
-
                 finish();
 
             }

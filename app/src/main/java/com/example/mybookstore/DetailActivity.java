@@ -72,20 +72,37 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (BookAmount.getText().toString().isEmpty()){
+                if (BookAmount.getText().toString().isEmpty()) {
                     Toast.makeText(DetailActivity.this, "Enter Valid Quantity", Toast.LENGTH_SHORT).show();
-                }else {
+                } else {
                     int quantity = Integer.parseInt(BookAmount.getText().toString());
-                    if ( quantity>0){
+                    if (quantity > 0) {
                         double bookPrice = Double.parseDouble(price);
                         double totalSameBook = bookPrice * quantity;
 
-                        CartItem item = new CartItem(bookname, quantity, bookPrice,totalSameBook);
-                        CartManager.cartItems.add(item);
-                    }else {
+                        boolean isExistingItem = false;
+
+                        for (CartItem item : CartManager.cartItems) {
+                            if (item.getBookName().equals(bookname)) {
+                                // Update the quantity and total price of the existing item
+                                item.setQuantity(quantity);
+                                item.setBookPrice(bookPrice);
+                                item.setTotalSameBook(totalSameBook);
+                                item.setTotalPrice(quantity*bookPrice);
+                                isExistingItem = true;
+                                break;
+                            }
+                        }
+
+                        if (!isExistingItem) {
+                            CartItem item = new CartItem(bookname, quantity, bookPrice, totalSameBook);
+                            CartManager.cartItems.add(item);
+                        }
+                    } else {
                         Toast.makeText(DetailActivity.this, "Enter Valid Quantity", Toast.LENGTH_SHORT).show();
                     }
                 }
+
 
             }
         });

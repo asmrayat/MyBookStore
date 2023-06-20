@@ -134,7 +134,7 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     public void handle(String value1,String value2,String value3,String value4){
-        Intent intent = new Intent(DetailActivity.this, BookListActivity.class);
+        Intent intent = new Intent(DetailActivity.this, MainActivity.class);
         intent.putExtra(value1, value1);
         intent.putExtra(value2, value2);
         intent.putExtra(value3, value3);

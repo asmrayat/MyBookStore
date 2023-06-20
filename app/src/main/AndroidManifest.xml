@@ -24,6 +24,9 @@
             android:name=".BookListActivity"
             android:exported="false" />
         <activity
+            android:name=".ManuActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
 

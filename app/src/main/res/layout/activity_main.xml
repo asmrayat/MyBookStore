@@ -1,110 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:id="@+id/drawerLayout"
 
-    <ScrollView
+    >
+    <include layout="@layout/app_bar_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+        android:layout_height="match_parent"
+        />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/autobiography"
-               android:layout_width="match_parent"
-               android:layout_height="200dp"
-               >
-               <ImageView
-                   android:scaleType="centerCrop"
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:src="@drawable/autobiography"
-                   />
-               <TextView
-                   android:layout_width="match_parent"
-                   android:layout_height="45dp"
-                   android:text="Autobiography"
-                   android:textColor="@color/black"
-                   android:background="#E680838A"
-                   android:textSize="30dp"
-                   android:paddingLeft="20dp"
-                   android:layout_gravity="bottom"
-                   />
-           </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:id="@+id/fictional"
-                >
-                <ImageView
-                    android:scaleType="centerCrop"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/fictional"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:text="Fictional"
-                    android:textColor="@color/black"
-                    android:background="#E680838A"
-                    android:textSize="30dp"
-                    android:paddingLeft="20dp"
-                    android:layout_gravity="bottom"
-                    />
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/comic"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                >
-                <ImageView
-                    android:scaleType="centerCrop"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/comic"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:text="Comics"
-                    android:textColor="@color/black"
-                    android:background="#E680838A"
-                    android:textSize="30dp"
-                    android:paddingLeft="20dp"
-                    android:layout_gravity="bottom"
-                    />
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/history"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                >
-                <ImageView
-                    android:scaleType="centerCrop"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/history"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:text="History"
-                    android:textColor="@color/black"
-                    android:background="#E680838A"
-                    android:textSize="30dp"
-                    android:paddingLeft="20dp"
-                    android:layout_gravity="bottom"
-                    />
-            </androidx.cardview.widget.CardView>
+    <com.google.android.material.navigation.NavigationView
+        app:itemTextColor="@color/white"
+        android:background="#6200ee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:id="@+id/navigationView"
+        app:headerLayout="@layout/header_layout"
+        app:menu="@menu/navigation_item"
+        />
 
-        </LinearLayout>
-    </ScrollView>
-
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

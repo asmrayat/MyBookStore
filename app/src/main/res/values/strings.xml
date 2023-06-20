@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyBookStore</string>
+    <string name="OpenDrawer">Open navigation drawer</string>
+    <string name="closeDrawer">Close navigation drawer</string>
 </resources>

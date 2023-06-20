@@ -47,14 +47,6 @@ public class BookListActivity extends AppCompatActivity {
         //author
         if (auto.equals("auto")){
 
-//            List<String> list = new ArrayList<>();
-//            list.add("Steve Jobs");
-//            list.add("Autobiography of a Yogi");
-//            list.add("Long Walk to Freedom");
-//            list.add("Wings of Fire");
-//
-//            ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(), R.layout.book_item,list);
-//            listView.setAdapter(arrayAdapter);
 
             listItem("Steve Jobs","Autobiography of a Yogi","Long Walk to Freedom","Wings of Fire");
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
